@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Unidad_2.Views.Login"
+             BackgroundColor="AliceBlue">
+    <ContentPage.Content>
+        <Grid>
+                     
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Image Grid.Row="0" Source="icon.png" Margin="0,50,0,50" WidthRequest="90" ></Image>
+
+            <StackLayout Grid.Row="1"  Margin="20,30,20,10" Spacing="15">
+
+                <Entry Placeholder="Usuario"
+                       PlaceholderColor="LightGray"
+                       TextColor="SlateGray"
+                       Text="{Binding UserTxt, Mode=TwoWay}"
+                       ></Entry>
+
+                <Entry Placeholder="Contraseña"
+                       PlaceholderColor="LightGray"
+                       TextColor="SlateGray"
+                       Text="{Binding PasswordTxt, Mode=TwoWay}"
+                       ></Entry>
+
+                <Button Text="Iniciar Sesion"
+                        BackgroundColor="White"
+                        CornerRadius="20"
+                        Command="{Binding LoginCommand}"
+                        TextColor="DeepSkyBlue"
+                        FontAttributes="Bold"
+                        ></Button>
+
+                <StackLayout Orientation="Horizontal" Margin="20" Spacing="20">
+                    <Label Text="¿Olvido su contraseña?" 
+                           TextColor="SlateGray"
+                           FontSize="17"></Label>
+                    <Label Text="Registrarse" 
+                           FontAttributes="Bold" 
+                            TextColor="SlateGray"
+                           FontSize="17"></Label>
+                </StackLayout>
+
+            </StackLayout>
+            
+
+            <Label Grid.Row="2" 
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Text=" Programación Movil" 
+                   Margin="0,0,0,50"
+                   ></Label>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

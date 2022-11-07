@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Unidad_2.Views.Controles">
+   
+      <StackLayout Spacing="20" Margin="20" Padding="15">
+
+        <ActivityIndicator IsRunning="true" HeightRequest="40"  Color="DarkSlateBlue" />
+        <Button Text="ACEPTAR"  BorderColor="Black"  BorderWidth="2" 
+                BackgroundColor="#F77722"  TextColor="White" HorizontalOptions="Center"
+                WidthRequest="160" CornerRadius="30"  HeightRequest="60" VerticalOptions="Center" />
+
+        <DatePicker  FontSize="Medium" TextColor="Blue"  MinimumDate="09/20/2022" MaximumDate="10/10/2022" 
+                    Format="M"   Margin="30,0,0,30"/>
+
+        <Editor  Placeholder="Editor"  PlaceholderColor="Gray" MaxLength="200"
+                 CharacterSpacing="2" AutoSize="TextChanges" TextTransform="Uppercase"/>
+       
+          <Entry PlaceholderColor="Gray" Placeholder="Entry" 
+                 TextTransform="Lowercase" CharacterSpacing="2" TextColor="CadetBlue" MaxLength="10"
+                 ClearButtonVisibility="WhileEditing" Keyboard="Text" ReturnType="Search" />
+
+        <Label Text="Label" HorizontalOptions="Center" TextColor="DarkSlateBlue" FontAttributes="Bold" />
+        <Picker Title="Select"  TitleColor="Red"/>
+        <ProgressBar  ProgressColor="Green"   Progress="0.6"/>
+        <SearchBar Placeholder="Busqueda" TextColor="CornflowerBlue" CancelButtonColor="red" 
+                   TextTransform="Lowercase" FontAttributes="Italic" HorizontalTextAlignment="Center" />
+
+       
+        <Slider Minimum="0" Maximum="100" ThumbColor="CornflowerBlue" MinimumTrackColor="red" MaximumTrackColor="Green" />
+        <Stepper Minimum="0" Maximum="5" Increment="1" BackgroundColor="AliceBlue" />
+        <StackLayout Orientation="Horizontal" Spacing="20">
+         
+            <Label Text="Recordar PW" Padding="10"></Label>
+            <Switch IsToggled="false" OnColor="GreenYellow"  ThumbColor="White"/>
+        </StackLayout>
+
+        <TimePicker  HorizontalOptions="Center" Format="T" TextColor="DarkSlateBlue"/>
+
+    </StackLayout >
+        
+        
+
+</ContentPage>

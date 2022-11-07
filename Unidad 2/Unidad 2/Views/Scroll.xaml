@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Unidad_2.Views.Scroll">
+    <ContentPage.Content>
+        
+            <StackLayout Margin="20" Spacing="15">
+
+            <Label Text="TITULO"
+                   FontSize="Medium"
+                   FontAttributes="Bold">    
+                            </Label>
+
+
+            <Label Text="SUB-TITULO"
+                   FontSize="Medium"
+                   FontAttributes="Bold">
+            </Label>
+            <ScrollView VerticalOptions="FillAndExpand">
+
+                <StackLayout>
+                    <Label Text="La Organización de Países Exportadores de Petróleo, OPEP, decidió realizar una reducción de su producción diaria de petróleo, esto con el objetivo de sostener los precios. La organización, que cuenta con trece miembros entre los cuales destacan Arabia Saudita y Rusia, llevará a cabo una disminución que representará el mayor recorte a la oferta petrolera desde mayo del 2020 cuando se buscó compensar el desplome de la demanda energética causada por la pandemia de la COVID-19. A pesar de este anuncio, se espera que la reducción, que iniciará en noviembre, en términos reales sea menor ya que las extracciones de varios países miembros del grupo se encuentran por debajo de la cuota nacional establecida, esto aún cuando están trabajando al máximo de sus capacidades técnicas." />
+                    <Label Text="La Organización de Países Exportadores de Petróleo, OPEP, decidió realizar una reducción de su producción diaria de petróleo, esto con el objetivo de sostener los precios. La organización, que cuenta con trece miembros entre los cuales destacan Arabia Saudita y Rusia, llevará a cabo una disminución que representará el mayor recorte a la oferta petrolera desde mayo del 2020 cuando se buscó compensar el desplome de la demanda energética causada por la pandemia de la COVID-19. A pesar de este anuncio, se espera que la reducción, que iniciará en noviembre, en términos reales sea menor ya que las extracciones de varios países miembros del grupo se encuentran por debajo de la cuota nacional establecida, esto aún cuando están trabajando al máximo de sus capacidades técnicas." />
+                    <Label Text="La Organización de Países Exportadores de Petróleo, OPEP, decidió realizar una reducción de su producción diaria de petróleo, esto con el objetivo de sostener los precios. La organización, que cuenta con trece miembros entre los cuales destacan Arabia Saudita y Rusia, llevará a cabo una disminución que representará el mayor recorte a la oferta petrolera desde mayo del 2020 cuando se buscó compensar el desplome de la demanda energética causada por la pandemia de la COVID-19. A pesar de este anuncio, se espera que la reducción, que iniciará en noviembre, en términos reales sea menor ya que las extracciones de varios países miembros del grupo se encuentran por debajo de la cuota nacional establecida, esto aún cuando están trabajando al máximo de sus capacidades técnicas." />
+
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+       
+    </ContentPage.Content>
+</ContentPage>

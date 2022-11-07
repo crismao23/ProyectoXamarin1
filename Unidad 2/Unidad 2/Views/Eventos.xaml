@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Unidad_2.Views.Eventos">
+    <ContentPage.Content>
+        <StackLayout Margin="30">
+            <Entry x:Name="etyNombre" PlaceholderColor="Gray" Placeholder="Entry" 
+                 TextTransform="Lowercase" TextChanged="etyNombre_TextChanged" CharacterSpacing="2" TextColor="CadetBlue" 
+                 />
+         
+            <Slider x:Name="sldTemp" Minimum="0" Maximum="100" ThumbColor="CornflowerBlue" MinimumTrackColor="red" MaximumTrackColor="Green" />
+
+            <Button Text="ACEPTAR"  BorderColor="Black"  BorderWidth="2"
+                    Clicked="Button_Clicked"
+                BackgroundColor="CornflowerBlue"  TextColor="White" HorizontalOptions="Center"
+                WidthRequest="160" CornerRadius="30"  HeightRequest="60" VerticalOptions="Center" />
+           
+            <Label x:Name="lblView" />
+            
+            <Label x:Name="lblTemp" Text="{Binding Value, StringFormat='{0:F2} Porc'}"
+                   BindingContext="{x:Reference sldTemp}" />
+
+            <Label x:Name="lblText" Text="{Binding Text  , StringFormat= 'Hola {0} buenas noches !' }"
+                   BindingContext="{x:Reference etyNombre}" FontSize="Medium" />
+            <Switch x:Name="swValid"  />
+            
+            <StackLayout  BindingContext="{x:Reference swValid}"
+                          IsVisible="{Binding IsToggled}" >
+                <Label Text="Label" HorizontalOptions="Center" TextColor="DarkSlateBlue" FontAttributes="Bold" />
+                <Picker Title="Select"  TitleColor="Red"/>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

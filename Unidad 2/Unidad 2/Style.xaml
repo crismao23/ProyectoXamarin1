@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            >
+
+    <Color x:Key="Primary" >#A7D2CB</Color>
+    <Color x:Key="Secondary">#874C62</Color>
+    <Color x:Key="Aux">#C98474</Color>
+    <Color x:Key="Fondo">#F2D388 </Color>
+    <Color x:Key="LabelBtn">#FFFF</Color>
+    
+    <Style TargetType="Label" >        
+        <Setter Property="FontSize"  Value="Medium"></Setter>
+    </Style>
+
+    <Style TargetType="Button" >
+        <Setter Property="CornerRadius" Value="30"></Setter>
+    </Style>
+
+    <Style TargetType="StackLayout">
+        <Setter Property="Margin" Value="20" ></Setter>
+        <Setter Property="Spacing" Value="30" ></Setter>
+    </Style>
+
+
+
+    <Style x:Key="BtnAceptar" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource Primary}"></Setter>
+        <Setter Property="Text" Value="ACEPTAR"></Setter>
+        <Setter Property="TextColor" Value="{StaticResource LabelBtn}"></Setter>
+    </Style>
+
+    <Style x:Key="BtnCancelar" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource Secondary}"></Setter>
+        <Setter Property="Text" Value="CANCELAR"></Setter>
+        <Setter Property="TextColor" Value="{StaticResource LabelBtn}"></Setter>
+    </Style>
+
+
+</ResourceDictionary>

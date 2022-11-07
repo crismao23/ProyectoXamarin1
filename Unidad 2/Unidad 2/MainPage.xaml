@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Unidad_2.MainPage">
+
+    <StackLayout Padding="20" Margin="10" Orientation="Vertical">
+
+        <Button Text="Fill"  CornerRadius="25" BackgroundColor="DarkBlue" TextColor="White" HorizontalOptions="Fill"/>
+        <Button Text="Start"  HorizontalOptions="Start" />
+        <Button Text="center"  HorizontalOptions="Center"/>        
+        <Button Text="End" HorizontalOptions="End" />
+
+        <BoxView  BackgroundColor="Aquamarine" CornerRadius="25" HeightRequest="10"/>
+
+    </StackLayout>
+    
+  </ContentPage>
