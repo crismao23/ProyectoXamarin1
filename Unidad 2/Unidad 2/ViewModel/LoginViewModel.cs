@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Windows.Input;
 using Unidad_2.Models;
+using Unidad_2.Views;
+using Unidad_2.Views.Main;
 using Xamarin.Forms;
 
 namespace Unidad_2.ViewModel
@@ -63,6 +65,7 @@ namespace Unidad_2.ViewModel
 				if (ListUser.Count > 0)
 				{
 					await Application.Current.MainPage.DisplayAlert("Hola", "Bienvenido", "Aceptar");
+					await Application.Current.MainPage.Navigation.PushAsync(new MainFlotante());
 				}
 				else
 				{

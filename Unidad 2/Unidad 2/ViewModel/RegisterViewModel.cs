@@ -76,7 +76,7 @@ namespace Unidad_2.ViewModel
 					"Aceptar");
 			}
 
-			if (string.IsNullOrEmpty(this.user))
+			else if (string.IsNullOrEmpty(this.user))
 			{
 				await Application.Current.MainPage.DisplayAlert(
 					"Error",
@@ -84,7 +84,7 @@ namespace Unidad_2.ViewModel
 					"Aceptar");
 			}
 
-			if (string.IsNullOrEmpty(this.name))
+			else if (string.IsNullOrEmpty(this.name))
 			{
 				await Application.Current.MainPage.DisplayAlert(
 					"Error",
@@ -92,7 +92,7 @@ namespace Unidad_2.ViewModel
 					"Aceptar");
 			}
 
-			if (string.IsNullOrEmpty(this.age))
+			else if (string.IsNullOrEmpty(this.age))
 			{
 				await Application.Current.MainPage.DisplayAlert(
 					"Error",
@@ -100,32 +100,35 @@ namespace Unidad_2.ViewModel
 					"Aceptar");
 			}
 
-			if (string.IsNullOrEmpty(this.password))
+			else if (string.IsNullOrEmpty(this.password))
 			{
 				await Application.Current.MainPage.DisplayAlert(
 					"Error",
 					"Debes ingresar una contrasena",
 					"Aceptar");
 			}
-			
-			try
-			{
-				UserModel user = new UserModel();
+			else {
+				try
+				{
+					UserModel user = new UserModel();
 
-				user.Nombre = NameTxt.ToString();
-				user.Email = EmailTxt.ToString();
-				user.UserName = UserTxt.ToString();
-				user.Edad = AgeTxt.ToString();
-				user.Password = PasswordTxt.ToString();
+					user.Nombre = NameTxt.ToString();
+					user.Email = EmailTxt.ToString();
+					user.UserName = UserTxt.ToString();
+					user.Edad = AgeTxt.ToString();
+					user.Password = PasswordTxt.ToString();
 
-				await App.Db.SaveUserModelAsync(user);
+					await App.Db.SaveUserModelAsync(user);
 
-				await Application.Current.MainPage.DisplayAlert("Registrado", "Agregado de manera exitosa", "Aceptar");
-				await Application.Current.MainPage.Navigation.PushAsync(new Home());
+					await Application.Current.MainPage.DisplayAlert("Registrado", "Agregado de manera exitosa", "Aceptar");
+					await Application.Current.MainPage.Navigation.PushAsync(new Home());
+				}
+				catch (Exception ex)
+				{
+					throw new Exception(ex.Message);
+				}
 			}
-			catch (Exception ex){
-				throw new Exception(ex.Message);
-			}
+
 		}
 		#endregion
 	}

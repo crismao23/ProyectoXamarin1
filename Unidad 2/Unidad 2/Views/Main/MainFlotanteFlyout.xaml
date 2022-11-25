@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Unidad_2.Views.Main.MainFlotanteFlyout"
              BackgroundColor="{StaticResource Fondo}"
+             xmlns:Font_ico="clr-namespace:Unidad_2.Fonts"
              Title="Flyout">
   <StackLayout>
     <ListView x:Name="MenuItemsListView"
@@ -10,23 +11,25 @@
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}">
       <ListView.Header>
-                <Grid BackgroundColor="{StaticResource Secondary}">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-          </Grid.ColumnDefinitions>
-          <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-          <Label
-              Grid.Column="0"
-              Grid.Row="0"
-              Text="Pagina de usuario"
-              Style="{DynamicResource SubtitleStyle}"
-              TextColor="Black"
-              HorizontalTextAlignment="Center"
-              VerticalTextAlignment="Center"
-              FontSize="24"
-              />
+                    <Grid BackgroundColor="{StaticResource Secondary}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="0" Grid.Column="0">
+                        <Image Source="user.png" VerticalOptions="Center"/>
+                        <Label
+                          Text="Pagina de usuario"
+                          Style="{DynamicResource SubtitleStyle}"
+                          TextColor="{StaticResource Fondo}"
+                          HorizontalTextAlignment="Center"
+                          VerticalTextAlignment="Center"
+                          FontSize="24"
+                          />
+                    </StackLayout>
+
         </Grid>
       </ListView.Header>
       <ListView.ItemTemplate>

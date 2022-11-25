@@ -16801,13 +16801,28 @@ namespace Unidad_2.Droid
 			public const int preference_list_divider_material = 2131165360;
 			
 			// aapt resource value: 0x7F0700B1
-			public const int test_custom_background = 2131165361;
+			public const int register = 2131165361;
 			
 			// aapt resource value: 0x7F0700B2
-			public const int tooltip_frame_dark = 2131165362;
+			public const int sandia = 2131165362;
 			
 			// aapt resource value: 0x7F0700B3
-			public const int tooltip_frame_light = 2131165363;
+			public const int signin = 2131165363;
+			
+			// aapt resource value: 0x7F0700B4
+			public const int test_custom_background = 2131165364;
+			
+			// aapt resource value: 0x7F0700B5
+			public const int tomate = 2131165365;
+			
+			// aapt resource value: 0x7F0700B6
+			public const int tooltip_frame_dark = 2131165366;
+			
+			// aapt resource value: 0x7F0700B7
+			public const int tooltip_frame_light = 2131165367;
+			
+			// aapt resource value: 0x7F0700B8
+			public const int user = 2131165368;
 			
 			static Drawable()
 			{

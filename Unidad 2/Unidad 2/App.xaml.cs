@@ -51,8 +51,8 @@ namespace Unidad_2
             */
 
             //aqui es para consultar en la base de datos
-            List<UserModel> Listusers = new List<UserModel>();
-            Listusers = App.Db.GetUserModel().Result;
+            //List<UserModel> Listusers = new List<UserModel>();
+            //Listusers = App.Db.GetUserModel().Result;
 
         }
 

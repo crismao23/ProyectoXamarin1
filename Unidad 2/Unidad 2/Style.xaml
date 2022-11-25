@@ -5,6 +5,8 @@
 
     <Color x:Key="Primary" >#37D30E</Color>
     <Color x:Key="Secondary">#02C9FF</Color>
+    <Color x:Key="Placeholder">SlateGray</Color>
+    <Color x:Key="TextForms">LightGray</Color>
     <Color x:Key="Back">#D30E4D</Color>
     <Color x:Key="Aux">#C98474</Color>
     <Color x:Key="Fondo">#272727 </Color>

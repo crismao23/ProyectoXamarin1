@@ -19,7 +19,7 @@
 
             <StackLayout Grid.Column="0" Grid.Row="1"  Margin="20,30,20,70" Spacing="15">
                 <Label Text="Bienvenidos"
-                   TextColor="#02C9FF"
+                   TextColor="{StaticResource Secondary}"
                    FontSize="Title"
                 HorizontalOptions="CenterAndExpand" 
                 />
