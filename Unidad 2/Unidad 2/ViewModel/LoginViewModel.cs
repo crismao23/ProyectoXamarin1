@@ -14,6 +14,8 @@ namespace Unidad_2.ViewModel
         #endregion
 
         #region  Propiedades
+
+        //Son las comunicadoras entre el view y viewmodel
         public string UserTxt
         {
             get { return user; }
@@ -29,6 +31,8 @@ namespace Unidad_2.ViewModel
         #endregion
 
         #region  Commands
+
+        //enlazan una accion en la viewmodel con un evento en la vista
         public ICommand LoginCommand
         {
             get
@@ -41,18 +45,30 @@ namespace Unidad_2.ViewModel
         #endregion
 
         #region Methods
+
+        //Aqui viene la logica
         public async void LoginMethod()
         {
-            string _query = "SELECT * FROM UserModel WHERE UserName = '"+ UserTxt.ToString() + "' AND Password = '"+ PasswordTxt.ToString() + "' ";
-            List<UserModel> ListUser = App.Db.QueryUserModel(_query).Result;
-            if(ListUser.Count>0)
+            if (string.IsNullOrEmpty(this.user) || string.IsNullOrEmpty(this.password))
             {
-               await Application.Current.MainPage.DisplayAlert("Welcome", "Bienvenido", "Aceptar");
+                await Application.Current.MainPage.DisplayAlert(
+                    "Error",
+                    "Debes diligenciar ambos campos",
+                    "Aceptar");
             }
-            else
-            {
-                await Application.Current.MainPage.DisplayAlert("Error", "Usuario incorrecto", "Aceptar");
-            }
+            else {
+				string _query = "SELECT * FROM UserModel WHERE UserName = '" + UserTxt.ToString() + "' AND Password = '" + PasswordTxt.ToString() + "' ";
+				List<UserModel> ListUser = App.Db.QueryUserModel(_query).Result;
+
+				if (ListUser.Count > 0)
+				{
+					await Application.Current.MainPage.DisplayAlert("Hola", "Bienvenido", "Aceptar");
+				}
+				else
+				{
+					await Application.Current.MainPage.DisplayAlert("Error", "Dato(s) incorrecto(s)", "Aceptar");
+				}
+			}
 
         }
         #endregion

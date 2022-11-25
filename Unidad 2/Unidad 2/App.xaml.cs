@@ -31,13 +31,15 @@ namespace Unidad_2
         {
             InitializeComponent();
 
-            MainPage = new CustomNav(new Register());
-        }
+			//el navigation/customnav crea la pila de navegacion
+			MainPage = new CustomNav(new Home());
+			
+		}
 
         protected override void OnStart()
         {
 
-
+            /*
             UserModel user = new UserModel();
             user.Nombre = "Pepe Perez";
             user.Email = "pepe@gmail.com";
@@ -46,10 +48,10 @@ namespace Unidad_2
             user.Password = "123456";
 
             var resul = App.Db.SaveUserModelAsync(user);
+            */
 
-
+            //aqui es para consultar en la base de datos
             List<UserModel> Listusers = new List<UserModel>();
-
             Listusers = App.Db.GetUserModel().Result;
 
         }

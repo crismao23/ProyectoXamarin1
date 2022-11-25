@@ -2,6 +2,7 @@
 using System;
 using System.Windows.Input;
 using Unidad_2.Models;
+using Unidad_2.Views;
 using Xamarin.Forms;
 
 namespace Unidad_2.ViewModel
@@ -73,7 +74,6 @@ namespace Unidad_2.ViewModel
 					"Error",
 					"Debes ingresar un email",
 					"Aceptar");
-				return;
 			}
 
 			if (string.IsNullOrEmpty(this.user))
@@ -82,7 +82,6 @@ namespace Unidad_2.ViewModel
 					"Error",
 					"Debes ingresar un usuario",
 					"Aceptar");
-				return;
 			}
 
 			if (string.IsNullOrEmpty(this.name))
@@ -91,7 +90,6 @@ namespace Unidad_2.ViewModel
 					"Error",
 					"Debes ingresar el nombre completo",
 					"Aceptar");
-				return;
 			}
 
 			if (string.IsNullOrEmpty(this.age))
@@ -100,7 +98,6 @@ namespace Unidad_2.ViewModel
 					"Error",
 					"Debes ingresar la edad",
 					"Aceptar");
-				return;
 			}
 
 			if (string.IsNullOrEmpty(this.password))
@@ -109,20 +106,22 @@ namespace Unidad_2.ViewModel
 					"Error",
 					"Debes ingresar una contrasena",
 					"Aceptar");
-				return;
 			}
 			
 			try
 			{
-				await App.Db.SaveUserModelAsync(new UserModel() {
-					UserName = UserTxt.ToString(),
-					Password = PasswordTxt.ToString(),
-					Nombre = NameTxt.ToString(),
-					Email = EmailTxt.ToString(),
-					Edad = AgeTxt.ToString()
+				UserModel user = new UserModel();
 
-				});
-				await Application.Current.MainPage.DisplayAlert("Welcome", "Agregado de manera exitosa", "Aceptar");
+				user.Nombre = NameTxt.ToString();
+				user.Email = EmailTxt.ToString();
+				user.UserName = UserTxt.ToString();
+				user.Edad = AgeTxt.ToString();
+				user.Password = PasswordTxt.ToString();
+
+				await App.Db.SaveUserModelAsync(user);
+
+				await Application.Current.MainPage.DisplayAlert("Registrado", "Agregado de manera exitosa", "Aceptar");
+				await Application.Current.MainPage.Navigation.PushAsync(new Home());
 			}
 			catch (Exception ex){
 				throw new Exception(ex.Message);

@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:Font_ico="clr-namespace:Unidad_2.Fonts"
+             NavigationPage.HasNavigationBar="False"
              Title="Recursos"
              x:Class="Unidad_2.Views.Recursos">
     <ContentPage.Content>

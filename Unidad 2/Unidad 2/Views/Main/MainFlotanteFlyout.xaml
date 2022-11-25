@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Unidad_2.Views.Main.MainFlotanteFlyout"
+             BackgroundColor="{StaticResource Fondo}"
+             Title="Flyout">
+  <StackLayout>
+    <ListView x:Name="MenuItemsListView"
+              SeparatorVisibility="None"
+              HasUnevenRows="true"
+              ItemsSource="{Binding MenuItems}">
+      <ListView.Header>
+                <Grid BackgroundColor="{StaticResource Secondary}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+          <Label
+              Grid.Column="0"
+              Grid.Row="0"
+              Text="Pagina de usuario"
+              Style="{DynamicResource SubtitleStyle}"
+              TextColor="Black"
+              HorizontalTextAlignment="Center"
+              VerticalTextAlignment="Center"
+              FontSize="24"
+              />
+        </Grid>
+      </ListView.Header>
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout HorizontalOptions="FillAndExpand">
+              <Label VerticalOptions="FillAndExpand" 
+                    VerticalTextAlignment="Center" 
+                    Text="{Binding Title}" 
+                    TextColor="{StaticResource Secondary}"
+                    FontSize="22"/>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>

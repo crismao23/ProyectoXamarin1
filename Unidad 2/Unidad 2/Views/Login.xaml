@@ -1,62 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Font_ico="clr-namespace:Unidad_2.Fonts"
              x:Class="Unidad_2.Views.Login"
-             BackgroundColor="AliceBlue">
+             Title="Regresar"
+             BackgroundColor="{StaticResource Fondo}">
     <ContentPage.Content>
         <Grid>
                      
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Image Grid.Row="0" Source="icon.png" Margin="0,50,0,50" WidthRequest="90" ></Image>
 
-            <StackLayout Grid.Row="1"  Margin="20,30,20,10" Spacing="15">
+            <Label Grid.Row="0" Text="{x:Static Font_ico:Fonts.Login}" 
+                   TextColor="{StaticResource Primary}" 
+                   FontFamily="fontello"  FontSize="100" 
+                   HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="Center"
+                   Margin="20,90,20,10"
+                   />
+            
+            <Label Text="Login"
+                   TextColor="{StaticResource Secondary}"
+                   FontSize="Title"
+                    HorizontalOptions="CenterAndExpand" 
+                   Grid.Row="1"
+            />
 
-                <Entry Placeholder="Usuario"
-                       PlaceholderColor="LightGray"
-                       TextColor="SlateGray"
+            <StackLayout Grid.Row="2"  Margin="20,70,20,10" Spacing="30">
+
+                <Entry Placeholder="Username"
+                       PlaceholderColor="SlateGray"
+                       TextColor="LightGray"
                        Text="{Binding UserTxt, Mode=TwoWay}"
                        ></Entry>
 
                 <Entry Placeholder="Contraseña"
-                       PlaceholderColor="LightGray"
-                       TextColor="SlateGray"
+                       PlaceholderColor="SlateGray"
+                       TextColor="LightGray"
                        Text="{Binding PasswordTxt, Mode=TwoWay}"
                        ></Entry>
 
-                <Button Text="Iniciar Sesion"
-                        BackgroundColor="White"
-                        CornerRadius="20"
-                        Command="{Binding LoginCommand}"
-                        TextColor="DeepSkyBlue"
-                        FontAttributes="Bold"
-                        ></Button>
-
-                <StackLayout Orientation="Horizontal" Margin="20" Spacing="20">
-                    <Label Text="¿Olvido su contraseña?" 
-                           TextColor="SlateGray"
-                           FontSize="17"></Label>
-                    <Label Text="Registrarse" 
-                           FontAttributes="Bold" 
-                            TextColor="SlateGray"
-                           FontSize="17"></Label>
-                </StackLayout>
+                <Button Style="{StaticResource BtnLogin}" Command="{Binding LoginCommand}"></Button>
 
             </StackLayout>
-            
 
-            <Label Grid.Row="2" 
-                   FontSize="Medium"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center"
-                   Text=" Programación Movil" 
-                   Margin="0,0,0,50"
-                   ></Label>
-            
         </Grid>
     </ContentPage.Content>
 </ContentPage>

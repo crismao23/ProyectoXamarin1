@@ -2,15 +2,35 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Fondo}"
              x:Class="Unidad_2.Views.Home">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <Image Source="ambi.png" VerticalOptions="Center" Grid.Column="0"  Grid.Row="0"/>
+
+            <StackLayout Grid.Column="0" Grid.Row="1"  Margin="20,30,20,70" Spacing="15">
+                <Label Text="Bienvenidos"
+                   TextColor="#02C9FF"
+                   FontSize="Title"
+                HorizontalOptions="CenterAndExpand" 
+                />
+                <Button Style="{StaticResource BtnLogin}" Clicked="Button_Login"></Button>
+                <Button Style="{StaticResource BtnRegistro}" Clicked="Button_Register"></Button>
+                <Button Style="{StaticResource BtnAceptar}" Clicked="Button_Maestro_Detalle"></Button>
+            </StackLayout>
+
+        </Grid>
 
 
-            <Button Style="{StaticResource BtnAceptar}" Clicked="Button_Clicked" ></Button>
-        </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>

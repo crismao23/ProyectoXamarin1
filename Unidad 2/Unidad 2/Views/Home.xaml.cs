@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Unidad_2.Views.Main;
 
 namespace Unidad_2.Views
 {
@@ -17,10 +18,22 @@ namespace Unidad_2.Views
             InitializeComponent();
         }
 
-        async void Button_Clicked(object sender, EventArgs e)
+        async void Button_Login(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Recursos());
+            await Navigation.PushAsync(new Login());
 
         }
-    }
+
+		async void Button_Register(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new Register());
+
+		}
+
+		async void Button_Maestro_Detalle(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new MainFlotante());
+
+		}
+	}
 }

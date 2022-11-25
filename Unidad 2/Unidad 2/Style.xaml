@@ -3,18 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             >
 
-    <Color x:Key="Primary" >#A7D2CB</Color>
-    <Color x:Key="Secondary">#874C62</Color>
+    <Color x:Key="Primary" >#37D30E</Color>
+    <Color x:Key="Secondary">#02C9FF</Color>
+    <Color x:Key="Back">#D30E4D</Color>
     <Color x:Key="Aux">#C98474</Color>
-    <Color x:Key="Fondo">#F2D388 </Color>
-    <Color x:Key="LabelBtn">#FFFF</Color>
+    <Color x:Key="Fondo">#272727 </Color>
+    <Color x:Key="LabelBtn">#272727</Color>
     
     <Style TargetType="Label" >        
         <Setter Property="FontSize"  Value="Medium"></Setter>
     </Style>
 
     <Style TargetType="Button" >
-        <Setter Property="CornerRadius" Value="30"></Setter>
+        <Setter Property="CornerRadius" Value="10"></Setter>
     </Style>
 
     <Style TargetType="StackLayout">
@@ -30,9 +31,21 @@
         <Setter Property="TextColor" Value="{StaticResource LabelBtn}"></Setter>
     </Style>
 
-    <Style x:Key="BtnCancelar" TargetType="Button">
+    <Style x:Key="BtnLogin" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource Primary}"></Setter>
+        <Setter Property="Text" Value="INICIAR SESION"></Setter>
+        <Setter Property="TextColor" Value="{StaticResource LabelBtn}"></Setter>
+    </Style>
+
+    <Style x:Key="BtnEnviar" TargetType="Button">
         <Setter Property="BackgroundColor" Value="{StaticResource Secondary}"></Setter>
-        <Setter Property="Text" Value="CANCELAR"></Setter>
+        <Setter Property="Text" Value="ENVIAR"></Setter>
+        <Setter Property="TextColor" Value="{StaticResource LabelBtn}"></Setter>
+    </Style>
+
+    <Style x:Key="BtnRegistro" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource Secondary}"></Setter>
+        <Setter Property="Text" Value="REGISTRARSE"></Setter>
         <Setter Property="TextColor" Value="{StaticResource LabelBtn}"></Setter>
     </Style>
 

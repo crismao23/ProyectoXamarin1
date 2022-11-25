@@ -1,88 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Unidad_2.Views.Register">
+             xmlns:Font_ico="clr-namespace:Unidad_2.Fonts"
+             x:Class="Unidad_2.Views.Register"
+            Title="Regresar"
+             BackgroundColor="{StaticResource Fondo}">
     <ContentPage.Content>
         <Grid>
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <Image Grid.Row="0" Source="icon.png" Margin="0,50,0,50" WidthRequest="90" ></Image>
+            <Label Grid.Row="0" Text="{x:Static Font_ico:Fonts.PlusSquaredAlt}" 
+                   TextColor="{StaticResource Primary}" 
+                   FontFamily="fontello"  FontSize="100" 
+                   HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="Center"
+                   Margin="20,90,20,10"
+                   />
 
-            <StackLayout Grid.Row="1"  Margin="20,30,20,10" Spacing="15">
+            <Label Text="Registro"
+                   TextColor="{StaticResource Secondary}"
+                   FontSize="Title"
+                    HorizontalOptions="CenterAndExpand" 
+                   Grid.Row="1"
+            />
 
+            <StackLayout Grid.Row="1"  Margin="20,30,20,10" Spacing="20">
                 <Entry
                     Placeholder="usuario@gmail.com"
-                    PlaceholderColor="LightGray"
-                    TextColor="SlateGray"
+                       PlaceholderColor="SlateGray"
+                       TextColor="LightGray"
                     Keyboard="Email"
                     MaxLength="40"
                     Text="{Binding EmailTxt, Mode=TwoWay}"
                     ></Entry>
 
-                <Entry Placeholder="Usuario"
-                    PlaceholderColor="LightGray"
-                    TextColor="SlateGray"
+                <Entry Placeholder="Username"
+                       PlaceholderColor="SlateGray"
+                       TextColor="LightGray"
                     Text="{Binding UserTxt, Mode=TwoWay}"
                     ></Entry>
 
                 <Entry Placeholder="Nombre Completo"
-                    PlaceholderColor="LightGray"
-                    TextColor="SlateGray"
+                       PlaceholderColor="SlateGray"
+                       TextColor="LightGray"
                     MaxLength="60"
                     Keyboard="Text"
                     Text="{Binding NameTxt, Mode=TwoWay}"
                     ></Entry>
 
                 <Entry Placeholder="Edad"
-                    PlaceholderColor="LightGray"
-                    TextColor="SlateGray"
+                       PlaceholderColor="SlateGray"
+                       TextColor="LightGray"
                     MaxLength="2"
                     Keyboard="Numeric"
                     Text="{Binding AgeTxt, Mode=TwoWay}"
                     ></Entry>
 
                 <Entry Placeholder="Contraseña"
-                    PlaceholderColor="LightGray"
+                    PlaceholderColor="SlateGray"
+                    TextColor="LightGray"
                     MaxLength="25"
                     IsPassword="True"
-                    TextColor="SlateGray"
                     Text="{Binding PasswordTxt, Mode=TwoWay}"
                     ></Entry>
 
-                <Button Text="Registrarse"
-                        BackgroundColor="White"
-                        CornerRadius="20"
+                <Button
                         Command="{Binding RegisterCommand}"
-                        TextColor="DeepSkyBlue"
-                        FontAttributes="Bold"
+                        Style="{StaticResource BtnEnviar}"
                         ></Button>
 
-                <StackLayout Orientation="Horizontal" Margin="20" Spacing="20">
-                    <Label Text="¿Ya tienes una cuenta?" 
-                           TextColor="SlateGray"
-                           FontSize="17"></Label>
-                    <Label Text="Regresar" 
-                           FontAttributes="Bold" 
-                            TextColor="SlateGray"
-                           FontSize="17"></Label>
-                </StackLayout>
-
             </StackLayout>
-
-
-            <Label Grid.Row="2" 
-                   FontSize="Medium"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center"
-                   Text=" Programación Movil" 
-                   Margin="0,0,0,50"
-                   ></Label>
-
         </Grid>
     </ContentPage.Content>
 </ContentPage>
