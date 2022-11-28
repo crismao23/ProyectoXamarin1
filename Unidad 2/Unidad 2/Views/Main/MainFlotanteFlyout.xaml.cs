@@ -6,7 +6,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-
+using Unidad_2.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -33,7 +33,7 @@ namespace Unidad_2.Views.Main
 			{
 				MenuItems = new ObservableCollection<MainFlotanteFlyoutMenuItem>(new[]
 				{
-					new MainFlotanteFlyoutMenuItem { Id = 0, Title = "Registros", TargetType = typeof(MainFlotanteDetail) },
+					new MainFlotanteFlyoutMenuItem { Id = 0, Title = "Registros", TargetType = typeof(RickModel) },
 					new MainFlotanteFlyoutMenuItem { Id = 1, Title = "Salir", TargetType = typeof(Home) }
 				});
 			}

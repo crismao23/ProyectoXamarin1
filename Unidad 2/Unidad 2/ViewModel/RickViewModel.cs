@@ -31,18 +31,6 @@ namespace Unidad_2.ViewModel
 		#region  Propiedades
 		//Son las comunicadoras entre el view y viewmodel
 
-		public string NameTxt
-		{
-			get { return name; }
-			set { SetValue(ref this.name, value); }
-		}
-
-		public string SpeciesTxt
-		{
-			get { return species; }
-			set { SetValue(ref this.species, value); }
-		}
-
 		public List<Result> ResultsList
 		{
 			get { return listResults; }
@@ -83,13 +71,17 @@ namespace Unidad_2.ViewModel
 				var listData = JsonConvert.DeserializeObject<RickModel>(data);
 
 				ResultsList = listData.results;
-
+				
 			}
 			else
 			{ }
 
 
 
+		}
+
+		public RickViewModel() {
+			GetDataMethod();
 		}
 
 		#endregion

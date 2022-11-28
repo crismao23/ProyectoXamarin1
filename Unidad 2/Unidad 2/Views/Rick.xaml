@@ -1,8 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Unidad_2.Views.Rick">
+             x:Class="Unidad_2.Views.Rick"
+             BackgroundColor="{StaticResource Fondo}"
+             Title="Personajes">
     <ContentPage.Content>
-        <Label Text="a" />
+        <ListView  x:Name="ListVAgenda" 
+                       ItemsSource="{Binding ResultsList}"
+                       IsPullToRefreshEnabled="False"
+                       SeparatorColor="LightSlateGray"
+                       HasUnevenRows="True"
+                       >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" ></ColumnDefinition>
+                                <ColumnDefinition Width="auto" ></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout Grid.Column="0" Grid.Row="0" VerticalOptions="Center" Spacing="0" Orientation="Vertical" Margin="10,10,0,10">
+                                <Frame Padding="0" CornerRadius="20">
+                                    <Image WidthRequest="100" Source="{Binding image}"></Image>
+                                </Frame>
+                            </StackLayout>
+
+                            <StackLayout Grid.Column="1" Grid.Row="0" VerticalOptions="Center" Spacing="0" Orientation="Vertical" Margin="10,0,0,0">
+                                <StackLayout Orientation="Horizontal" Spacing="2" Margin="20,10,0,0">
+                                    <Label  Text="Nombre:"  FontAttributes="Bold" FontSize="12" TextColor="{StaticResource Primary}"></Label>
+                                    <Label  Text="{Binding name}" FontSize="12" TextColor="{StaticResource TextForms}"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal"  Spacing="2" Margin="20,10,0,0">
+                                    <Label  Text="Especie:"  FontAttributes="Bold" FontSize="12"  TextColor="{StaticResource Primary}"></Label>
+                                    <Label  Text="{Binding species}" FontSize="12"  TextColor="{StaticResource TextForms}"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal"  Spacing="2" Margin="20,10,0,0">
+                                    <Label  Text="Locacion:"  FontAttributes="Bold" FontSize="12"  TextColor="{StaticResource Primary}"></Label>
+                                    <Label  Text="{Binding location.name}" FontSize="12"  TextColor="{StaticResource TextForms}"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>
