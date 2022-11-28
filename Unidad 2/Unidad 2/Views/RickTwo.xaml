@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Unidad_2.Views.RickTwo"
+             BackgroundColor="{StaticResource Fondo}">
+    <StackLayout Padding="12,0,12,12" Spacing="6">
+        <Button Text="Characters" Clicked="Get_Character"/>
+        <ListView x:Name="Character">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label Text="{Binding name}" TextColor="Aqua"/>
+                                <Label Text="{Binding species}" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -26,7 +26,7 @@ namespace Unidad_2.Models
 		#region Constructor
 		public DataService()
 		{
-			RestUrl = "https://ambi.azurewebsites.net/api/GetAmbiData?code=b-tezz0suZz0oWp5KYTJXWVFwiga8Ta6Rc7WY6lzS-ABAzFuOjgFVw==&email=cmarenas@utp.edu.co"; // Set your REST API url here
+			RestUrl = "https://rickandmortyapi.com/api/character/1,2,3,4,5"; // Set your REST API url here
 			client = new HttpClient();
 		}
 

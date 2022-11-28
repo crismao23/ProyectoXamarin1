@@ -23,22 +23,14 @@
                                         <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
                                 <StackLayout Grid.Row="0"  Orientation="Horizontal" Margin="20,0,0,0">
-                                    <Label Text="Fecha de registro:   " HorizontalOptions="Start" TextColor="{StaticResource Fondo}" FontSize="14"/>
-                                    <Label Text="{Binding [fecha_registro]}" HorizontalOptions="Start" TextColor="{StaticResource Fondo}" FontSize="12"/>
+                                    <Label Text="Personaje:   " HorizontalOptions="Start" TextColor="{StaticResource Fondo}" FontSize="14"/>
+                                    <Label Text="{Binding [name]}" HorizontalOptions="Start" TextColor="{StaticResource Fondo}" FontSize="12"/>
                                     </StackLayout>
                                 <StackLayout Grid.Row="1"  Orientation="Horizontal" Margin="20,0,0,0">
-                                    <Label Text="Temperatura(°C):        " HorizontalOptions="Start" TextColor="{StaticResource Fondo}" FontSize="14"/>
-                                    <Label Text="{Binding [temperatura]}" HorizontalOptions="Start" TextColor="{StaticResource Fondo}" FontSize="12"/>
-                                    </StackLayout>
-                                <StackLayout Grid.Row="2"  Orientation="Horizontal" Margin="20,0,0,0">
-                                    <Label Text="Humedad relativa (%):" HorizontalOptions="Start" TextColor="{StaticResource Fondo}" FontSize="14"/>
-                                    <Label Text="{Binding [humedad_relativa]}" HorizontalOptions="Start" TextColor="{StaticResource Fondo}" FontSize="12"/>
-                                    </StackLayout>
-                                <StackLayout Grid.Row="3"  Orientation="Horizontal" Margin="20,0,0,0">
-                                    <Label Text="Dispositivo:                 " HorizontalOptions="Start" TextColor="{StaticResource Fondo}" FontSize="14"/>
-                                    <Label Text="{Binding [identificacion]}" HorizontalOptions="Start" TextColor="{StaticResource Fondo}" FontSize="12"/>
-                                    </StackLayout>
-                                </Grid>
+                                    <Label Text="Especie:        " HorizontalOptions="Start" TextColor="{StaticResource Fondo}" FontSize="14"/>
+                                    <Label Text="{Binding [species]}" HorizontalOptions="Start" TextColor="{StaticResource Fondo}" FontSize="12"/>
+                                </StackLayout>
+                            </Grid>
                             </Frame>
                         </DataTemplate>
                     </syncfusion:SfListView.ItemTemplate>

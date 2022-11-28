@@ -32,7 +32,7 @@ namespace Unidad_2.Views
 
 		async void Button_Maestro_Detalle(object sender, EventArgs e)
 		{
-			await Navigation.PushAsync(new MainFlotante());
+			await Navigation.PushAsync(new Rick());
 
 		}
 	}
