@@ -15,7 +15,7 @@
 
 
             <StackLayout  Grid.Row="0" Margin="20,90,20,20">
-                <Image Source="register.png" VerticalOptions="Center"/>
+                <Image Source="rick.png" VerticalOptions="Center" WidthRequest="130"/>
                 <Label Text="Registro"
                    TextColor="{StaticResource Secondary}"
                    FontSize="Title"
@@ -25,7 +25,7 @@
             
             <StackLayout Grid.Row="1"  Margin="20,30,20,10" Spacing="20">
                 <Entry
-                    Placeholder="usuario@gmail.com"
+                    Placeholder="rick@gmail.com"
                        PlaceholderColor="{StaticResource Placeholder}"
                        TextColor="{StaticResource TextForms}"
                         Keyboard="Email"

@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Unidad_2.Views.Main.MainFlotante"
             NavigationPage.HasNavigationBar="False"
-             xmlns:pages="clr-namespace:Unidad_2.Views.Main">
+             xmlns:pages="clr-namespace:Unidad_2.Views.Main" xmlns:pages1="clr-namespace:Unidad_2.Views">
   <FlyoutPage.Flyout>
     <pages:MainFlotanteFlyout x:Name="FlyoutPage" />
   </FlyoutPage.Flyout>
   <FlyoutPage.Detail>
     <NavigationPage>
       <x:Arguments>
-        <pages:MainFlotanteDetail />
+        <pages1:Rick />
       </x:Arguments>
     </NavigationPage>
   </FlyoutPage.Detail>

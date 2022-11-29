@@ -64,7 +64,6 @@ namespace Unidad_2.ViewModel
 
 				if (ListUser.Count > 0)
 				{
-					await Application.Current.MainPage.DisplayAlert("Hola", "Bienvenido", "Aceptar");
 					await Application.Current.MainPage.Navigation.PushAsync(new MainFlotante());
 				}
 				else

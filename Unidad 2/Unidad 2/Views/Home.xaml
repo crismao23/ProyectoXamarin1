@@ -15,7 +15,7 @@
                 <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
 
-            <Image Source="ambi.png" VerticalOptions="Center" Grid.Column="0"  Grid.Row="0"/>
+            <Image Source="rym.png" VerticalOptions="Center" Grid.Column="0"  Grid.Row="0"/>
 
             <StackLayout Grid.Column="0" Grid.Row="1"  Margin="20,30,20,70" Spacing="15">
                 <Label Text="Bienvenidos"
@@ -25,7 +25,6 @@
                 />
                 <Button Style="{StaticResource BtnLogin}" Clicked="Button_Login"></Button>
                 <Button Style="{StaticResource BtnRegistro}" Clicked="Button_Register"></Button>
-                <Button Style="{StaticResource BtnAceptar}" Clicked="Button_Maestro_Detalle"></Button>
             </StackLayout>
 
         </Grid>

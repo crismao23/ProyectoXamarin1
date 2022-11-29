@@ -33,8 +33,9 @@ namespace Unidad_2.Views.Main
 			{
 				MenuItems = new ObservableCollection<MainFlotanteFlyoutMenuItem>(new[]
 				{
-					new MainFlotanteFlyoutMenuItem { Id = 0, Title = "Registros", TargetType = typeof(RickModel) },
-					new MainFlotanteFlyoutMenuItem { Id = 1, Title = "Salir", TargetType = typeof(Home) }
+					new MainFlotanteFlyoutMenuItem { Id = 0, Title = "Personajes", TargetType = typeof(Rick), Image = "pickle.png" },
+					new MainFlotanteFlyoutMenuItem { Id = 1, Title = "Locaciones", TargetType = typeof(Location), Image = "ship.png" },
+					new MainFlotanteFlyoutMenuItem { Id = 2, Title = "Salir", TargetType = typeof(Home), Image = "portal.png" }
 				});
 			}
 

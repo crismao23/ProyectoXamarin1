@@ -15,7 +15,7 @@
 
 
             <StackLayout  Grid.Row="0" Margin="20,90,20,20">
-                <Image Source="signin.png" VerticalOptions="Center"/>
+                <Image Source="morty.png" VerticalOptions="Center" WidthRequest="200"/>
                 <Label Text="Ingresar"
                    TextColor="{StaticResource Primary}"
                    FontSize="Title"

@@ -29,11 +29,5 @@ namespace Unidad_2.Views
 			await Navigation.PushAsync(new Register());
 
 		}
-
-		async void Button_Maestro_Detalle(object sender, EventArgs e)
-		{
-			await Navigation.PushAsync(new Rick());
-
-		}
 	}
 }

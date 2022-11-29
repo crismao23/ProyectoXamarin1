@@ -7,8 +7,6 @@
     <Color x:Key="Secondary">#02C9FF</Color>
     <Color x:Key="Placeholder">SlateGray</Color>
     <Color x:Key="TextForms">LightGray</Color>
-    <Color x:Key="Back">#D30E4D</Color>
-    <Color x:Key="Aux">#C98474</Color>
     <Color x:Key="Fondo">#272727 </Color>
     <Color x:Key="LabelBtn">#272727</Color>
     
@@ -23,14 +21,6 @@
     <Style TargetType="StackLayout">
         <Setter Property="Margin" Value="20" ></Setter>
         <Setter Property="Spacing" Value="30" ></Setter>
-    </Style>
-
-
-
-    <Style x:Key="BtnAceptar" TargetType="Button">
-        <Setter Property="BackgroundColor" Value="{StaticResource Primary}"></Setter>
-        <Setter Property="Text" Value="ACEPTAR"></Setter>
-        <Setter Property="TextColor" Value="{StaticResource LabelBtn}"></Setter>
     </Style>
 
     <Style x:Key="BtnLogin" TargetType="Button">

@@ -1,40 +1,29 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Command;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Data;
-using System.Diagnostics;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
-using System.Xml.Linq;
-using CommonServiceLocator;
-using GalaSoft.MvvmLight.Command;
-using Newtonsoft.Json;
 using Unidad_2.Models;
-using static Unidad_2.Models.RickModel;
 
 namespace Unidad_2.ViewModel
 {
-	internal class RickViewModel: BaseViewModel
+	internal class LocationViewModel: BaseViewModel
 	{
 		#region Atributos
-
-		public List<Result> listResults;
-
+		public List<Resu> listResul;
 		#endregion
 
 
 		#region  Propiedades
 		//Son las comunicadoras entre el view y viewmodel
 
-		public List<Result> ResultsList
+		public List<Resu> LocationList
 		{
-			get { return listResults; }
-			set { SetValue(ref this.listResults, value); }
+			get { return listResul; }
+			set { SetValue(ref this.listResul, value); }
 		}
-
 
 		#endregion
 
@@ -54,7 +43,7 @@ namespace Unidad_2.ViewModel
 		{
 
 			var client = new HttpClient();
-			string url = "https://rickandmortyapi.com/api/character";
+			string url = "https://rickandmortyapi.com/api/location";
 
 			var request = new HttpRequestMessage(HttpMethod.Get, url);
 
@@ -65,10 +54,10 @@ namespace Unidad_2.ViewModel
 
 			if (data != null)
 			{
-				var listData = JsonConvert.DeserializeObject<RickModel>(data);
+				var list = JsonConvert.DeserializeObject<LocationModel>(data);
 
-				ResultsList = listData.results;
-				
+				LocationList = list.results;
+
 			}
 			else
 			{ }
@@ -77,10 +66,12 @@ namespace Unidad_2.ViewModel
 
 		}
 
-		public RickViewModel() {
+		public LocationViewModel()
+		{
 			GetDataMethod();
 		}
 
 		#endregion
+
 	}
 }
